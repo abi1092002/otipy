@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript form validation - checking non-empty</title>
+<link rel='stylesheet' href='form-style.css' type='text/css' /> 
+<link rel="stylesheet" href="style_login.css">     
+</head>
+<body onload='document.form1.text1.focus()'>
+
+<div class="container">
+
+<div class="mail">
+<h2>OTP Verification</h2>
+<form id="home" name="form1" action="#">
+<ul>
+<li><input type='text' name='text1' placeholder="Enter the code"/></li>
+<li>&nbsp;</li>
+<li class="submit"><input type="submit" name="submit" value="Verify" onclick="phonecode(document.form1.text1)"/></li>
+<li>&nbsp;</li>
+</ul>
+</form>
+</div>
+</div>
+
+
+
+<script>
+    function phonecode(inputcode)
+{
+  var phoneco = /^\d{6}$/;
+  var code = 123456;
+  if(inputcode.value.match(phoneco) && inputcode.value.match(code))
+  {
+      document.getElementById("home").action = "home.html";
+      return true;
+  }
+  else
+  {
+     alert("Not a valid code");
+     return false;
+  }
+  }
+
+</script>
+
+
+</body>
+</html>

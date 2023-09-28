@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otipy:Buy Online Farm Fresh Fooditems</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/bbac06ad12.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+
+    <!------------------------- nav-bar ------------------------>
+    <nav>
+        <div class="container navbar">
+          <div class="logo">
+            <a href="#"><img src="logo.png" alt="Logo"></a>
+          </div>
+          <div class="menu1">
+            <ul>
+              <li ><a class="login" href="index.html">Logout</a></li>
+              <li class="cart"><i class="fa-solid fa-cart-shopping"></i></li>
+            </ul>
+          </div>
+
+          <div class="input-box">
+            <input type="text" placeholder="Search 1500+ products" class="form-control">
+            <i class="fa-solid fa-magnifying-glass"></i>                  
+          </div>
+
+          <div class="menu">
+            <ul>
+              <li class="loc"><i class="fa-solid fa-location-dot"></i> Location</li>
+              <li ><a class="login" href="index.html">Logout</a></li>
+              <li class="cart"><i class="fa-solid fa-cart-shopping"></i></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!------------------------- header ------------------------>
+    <div class="header">
+       <div class="container">
+        <ul>
+            <li><a href="#vegetables">Vegitables</a></li>
+            <li><a href="#fruits">Fruits</a></li>
+            <li><a href="#drinks">Drinks</a></li>
+            <li><a href="#rice">Rice & Pulses</a></li>
+            <li><a href="#spices">Spices</a></li>
+        </ul>
+       </div>
+    </div>
+    <!------------------------- side scroll ------------------------>
+  <div class="container" style="height: 400px;">
+
+    <div id="elem">
+        <img src="3.png" alt="">
+        <img src="2.png" alt="">
+        <img src="8.png" alt="">
+        <img src="4.png" alt="">
+        <img src="5.png" alt="">
+        <img src="6.png" alt="">
+        <img src="7.png" alt="">
+      </div>
+
+   
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+      <script> $(function() {
+        var print = function(msg) {
+          alert(msg);
+        };
+ 
+        var setInvisible = function(elem) {
+          elem.css('visibility', 'hidden');
+        };
+        var setVisible = function(elem) {
+          elem.css('visibility', 'visible');
+        };
+ 
+        var elem = $("#elem");
+        var items = elem.children();
+ 
+        // Inserting Buttons
+        elem.prepend('<div id="right-button" style="visibility: hidden;"><a href="#"><i class="fa-solid fa-chevron-right"></i></a></div>');
+        elem.append('  <div id="left-button" ><a href="#"><i class="fa-solid fa-chevron-right fa-rotate-180"></i></i></a></div>');
+ 
+        // Inserting Inner
+        items.wrapAll('<div id="inner" />');
+ 
+        // Inserting Outer
+        debugger;
+        elem.find('#inner').wrap('<div id="outer"/>');
+ 
+        var outer = $('#outer');
+ 
+        var updateUI = function() {
+          var maxWidth = outer.outerWidth(true);
+          var actualWidth = 0;
+          $.each($('#inner >'), function(i, item) {
+            actualWidth += $(item).outerWidth(true);
+          });
+ 
+          if (actualWidth <= maxWidth) {
+            setVisible($('#left-button'));
+          }
+        };
+        updateUI();
+ 
+ 
+ 
+        $('#right-button').click(function() {
+          var leftPos = outer.scrollLeft();
+          outer.animate({
+            scrollLeft: leftPos + 400
+          }, 800, function() {
+            debugger;
+            if ($('#outer').scrollLeft() <= 0) {
+              setInvisible($('#right-button'));
+            }
+          });
+        });
+ 
+        $('#left-button').click(function() {
+          setVisible($('#right-button'));
+          var leftPos = outer.scrollLeft();
+          outer.animate({
+            scrollLeft: leftPos - 400
+          }, 800);
+        });
+ 
+        $(window).resize(function() {
+          updateUI();
+        });
+      });
+ </script>
+
+</div>
+      
+    <!------------------------- deals ------------------------>
+
+    <div id="deals" style="height:100%;">
+      <div class="container" style="padding: 30px;">
+       <h3>Flash Deals</h3>
+        <div class="card-list">
+            <div class="card" style="width: 15rem;background-color: rgb(247, 213, 213);" >
+                <div class="card-title1">
+                    <h4 style="background-color: #ab1616;">4<span style="font-size: 16px;">/500g</span> </h4>
+                </div>
+                <h3 style="color: red;;">Tomato Hybrid</h3>
+                <img src="tomato.png" style="background-color: #e8a0a0;" alt="">
+                <button class="add">ADD</button>
+
+            </div>
+            <div class="card" style="width: 15rem;background-color: rgb(240, 234, 197);" >
+                <div class="card-title1">
+                    <h4 style="background-color: #cc9c0b;">5<span style="font-size: 16px;">/500g</span> </h4>
+                </div>
+                <h3 style="color: rgb(183, 154, 11);;">Potato</h3>
+                <img src="potato.png" style="background-color: #c5ba75;" alt="">
+                <button class="add">ADD</button>
+
+            </div>
+            <div class="card" style="width: 15rem;background-color: rgb(239, 168, 222);" >
+                <div class="card-title1">
+                    <h4 style="background-color: #9f1c59;">4<span style="font-size: 16px;">/500g</span> </h4>
+                </div>
+                <h3 style="color: rgb(242, 13, 128);;">Onion</h3>
+                <img src="onion.png" style="background-color: #c664b4;" alt="">
+                <button class="add">ADD</button>
+
+            </div>
+            <div class="card" style="width: 15rem;background-color: rgb(142, 221, 163);" >
+              <div class="card-title1">
+                  <h4 style="background-color: #088623;">4<span style="font-size: 16px;">/500g</span> </h4>
+              </div>
+              <h3 style="color: rgb(12, 218, 67);;">Tomato Hybrid</h3>
+              <img src="bhindhi.png" style="background-color: #8cc499;" alt="">
+              <button class="add">ADD</button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!------------------------- vegetables ------------------------>
+
+    <div id="vegetables">
+      <div class="container" style="padding: 30px;">
+       <h3>Vegitables</h3>
+       <div class="card-list"> 
+        <div class="card" style="width: 15rem;border-radius: 10px;">
+          <img src="bhindhi.png" alt="...">
+          <h4>Bhindhi</h4>
+          <p>$40/kg</p>
+          <button class="add-btn">ADD</button>
+        </div>
+
+          <div class="card" style="width: 15rem;border-radius: 10px;">
+            <img src="onion.png" alt="...">
+            <h4>Onion</h4>
+            <p>$50/kg</p>
+            <button class="add-btn">ADD</button>
+          </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="tomato.png" alt="...">
+              <h4>Tomato</h4>
+              <p>$80/kg</p>
+              <button class="add-btn">ADD</button>
+            </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="potato.png" alt="...">
+              <h4>Potato</h4>
+              <p>$30/kg</p>
+              <button class="add-btn">ADD</button>
+            </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="carot.webp" alt="...">
+              <h4>Carrot</h4>
+              <p>$40/kg</p>
+              <button class="add-btn">ADD</button>
+            </div>
+          </div> 
+      </div>
+    </div>
+    <!------------------------- fruits ------------------------>
+
+    <div id="fruits">
+      <div class="container" style="padding: 30px;">
+        <h3>Fruits</h3>
+        <div class="card-list">
+        <div class="card" style="width: 15rem;border-radius: 10px;">
+          <img src="apple.png" alt="...">
+          <h4>Apple</h4>
+          <p>$140/kg</p>
+          <button class="add-btn">ADD</button>
+        </div>
+
+          <div class="card" style="width: 15rem;border-radius: 10px;">
+            <img src="orange.png" alt="...">
+            <h4>Orange</h4>
+            <p>$150/kg</p>
+            <button class="add-btn">ADD</button>
+          </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="grape.webp" alt="...">
+              <h4>Grape</h4>
+              <p>$100/kg</p>
+              <button class="add-btn">ADD</button>
+            </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="mango.webp" alt="...">
+              <h4>Mango</h4>
+              <p>$160/kg</p>
+              <button class="add-btn">ADD</button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!------------------------- drinks ------------------------>
+
+    <div id="drinks">
+      <div class="container" style="padding: 30px;">
+        <h3>Drinks</h3>
+        <div class="card-list">
+        <div class="card" style="width: 15rem;border-radius: 10px;">
+          <img src="pepsi.avif" alt="...">
+          <h4>Pepsi</h4>
+          <p>$90(2L)</p>
+          <button class="add-btn">ADD</button>
+        </div>
+
+          <div class="card" style="width: 15rem;border-radius: 10px;">
+            <img src="cocacola.webp" alt="...">
+            <h4>Coca-Cola</h4>
+            <p>$40(750ml)</p>
+            <button class="add-btn">ADD</button>
+          </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="sprite.jpg" alt="...">
+              <h4>Sprite</h4>
+              <p>$60(1L)</p>
+              <button class="add-btn">ADD</button>
+            </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="miranda.jpeg" alt="...">
+              <h4>Mirinda</h4>
+              <p>$65(1L)</p>
+              <button class="add-btn">ADD</button>
+            </div>
+
+           </div>
+      </div>
+    </div>
+    <!------------------------- rice & pulses ------------------------>
+
+    <div id="rice">
+      <div class="container" style="padding: 30px;">
+        <h3>Rice & Pulses</h3>
+        <div class="card-list">
+        <div class="card" style="width: 15rem;border-radius: 10px;">
+          <img src="matta.webp" alt="...">
+          <h4>Matta Rice</h4>
+          <p>$426(5kg)</p>
+          <button class="add-btn">ADD</button>
+        </div>
+
+          <div class="card" style="width: 15rem;border-radius: 10px;">
+            <img src="gheerice.webp" alt="...">
+            <h4>Ghee Rice</h4>
+            <p>$170(1kg)</p>
+            <button class="add-btn">ADD</button>
+          </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="kadala.webp" alt="...">
+              <h4>Black Channa</h4>
+              <p>$70(1kg)</p>
+              <button class="add-btn">ADD</button>
+            </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="greenpeas.jpeg" alt="...">
+              <h4>Green Peas</h4>
+              <p>$50(1kg)</p>
+              <button class="add-btn">ADD</button>
+            </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="dhal.jpeg" alt="...">
+              <h4>Dal</h4>
+              <p>$120(1kg)</p>
+              <button class="add-btn">ADD</button>
+            </div>
+    
+              <div class="card" style="width: 15rem;border-radius: 10px;">
+                <img src="peas.jpeg" alt="...">
+                <h4>Cow Peas</h4>
+                <p>$70(1kg)</p>
+                <button class="add-btn">ADD</button>
+              </div>
+    
+                <div class="card" style="width: 15rem;border-radius: 10px;">
+                  <img src="basmati.jpeg" alt="...">
+                  <h4>Basmati Rice</h4>
+                  <p>$60(1kg)</p>
+                  <button class="add-btn">ADD</button>
+                </div>
+    
+                <div class="card" style="width: 15rem;border-radius: 10px;">
+                  <img src="peanut.jpeg" alt="...">
+                  <h4>Peanut</h4>
+                  <p>$65(200g)</p>
+                  <button class="add-btn">ADD</button>
+                </div>
+
+           </div>
+      </div>
+    </div>
+
+
+    <!------------------------- spices ------------------------>
+
+    <div id="spices">
+      <div class="container" style="padding: 30px;">
+        <h3>Spices</h3>
+        <div class="card-list">
+        <div class="card" style="width: 15rem;border-radius: 10px;">
+          <img src="chillli.jpeg" alt="...">
+          <h4>Red Chilli<br>Powder</h4>
+          <p>$30(100g)</p>
+          <button class="add-btn">ADD</button>
+        </div>
+
+          <div class="card" style="width: 15rem;border-radius: 10px;">
+            <img src="coriander.webp" alt="...">
+            <h4>Coriander<br>Powder</h4>
+            <p>$40(100g)</p>
+            <button class="add-btn">ADD</button>
+          </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="turmeric.jpeg" alt="...">
+              <h4>Turmeric<br>Powder</h4>
+              <p>$60(100g)</p>
+              <button class="add-btn">ADD</button>
+            </div>
+
+            <div class="card" style="width: 15rem;border-radius: 10px;">
+              <img src="garam-masala.png" alt="...">
+              <h4>Garam Masala<br>Powder</h4>
+              <p>$25(100g)</p>
+              <button class="add-btn">ADD</button>
+            </div>
+
+           </div>
+      </div>
+    </div>
+
+ <!------------------------- ending ------------------------>
+ <div class="container" style="padding: 50px;">
+  <h1 style="text-align: center;">INDA'S FASTEST Farm-to-Home Delivery</h1>
+  <img src="end.png" alt="" style="width: 100%;">
+ </div>
+    
+  <!------------------------- footer ------------------------>
+  <footer>
+    <p><a class="footer-left" href="">All Copyrights Reserved</a><a class="footer-right" href="">Terms & Conditions<span>Privacy Policy</span></a></p>
+   </footer>
+      
+</body>
+</html>
